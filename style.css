@@ -2,13 +2,82 @@
     margin: 0 auto;
 }
 
-tr{
-    outline: 1px solid black;
+header{
+  height: 25vh;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns:1fr;
+  align-items: end;
+  width: 100%;
+  background:url('./assets/bg.jpg');
+  background-position: center 100%;
+  background-size: 40%;
+  position: relative;
+  font-family: 'playfair display'
 }
 
-td, td{
+header::before {
+   content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+    z-index: 1;
+}
+header *{
+  z-index: 2;
+  /* color: white; */
+}
+
+header h1{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  color:white;
+}
+
+.search label{
+  color:white;
+}
+.search{
+  display: inline-block;
+  grid-column: 1/3;
+  grid-row:2/3;
+  padding-bottom: 20px;
+  justify-items: center;
+  color:black;
+}
+
+body{
+  background: url('./assets/bg2.jpg')
+}
+
+table{
+  background-color: white;
+  border:none;
+}
+tr{
+    outline: 1px solid black;
+    /* text-decoration: line-through; */
+}
+thead {
+  font-family: 'merriweather';
+}
+td, th{
     border-left: 1px solid #ccc;
     padding: 8px;
+}
+
+thead th:not(:first-child){
+  width: 168px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+tbody input {
+  font-family: 'nunito';
 }
 
 tfoot td {
@@ -39,6 +108,8 @@ tfoot button:active {
 td input{
     color:black;
     border:none;
+    cursor: default;
+
 }
 
 td input[readonly]:focus{
@@ -49,6 +120,54 @@ td input[readonly]:focus{
 .addInputBorder{
     border: 1px solid black;
     background-color: white;
-    color: #999;
+    color: black;
+    cursor:text;
 }
 
+.hidden{
+  display:none;
+}
+
+tfoot button{
+  font-weight: 700;
+  font-size:1.1rem;
+
+}
+
+button {
+  cursor: pointer;
+    font-family: 'roboto';
+
+}
+
+progress{
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  border:1px solid #b2b1b1;
+  appearance: none; /* removes default styling */
+  -webkit-appearance: none;
+  background-color: #eee; /* fallback for unsupported browsers */
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50; /* green fill */
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50; /* green fill */
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.sep{
+  height: 1.2vh;
+  background-color: #4caf50;
+}
