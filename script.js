@@ -84,8 +84,10 @@ function renderUI() {
 
         })
 
-        //styling button:
+        //styling:
         changeButtonBG(editBtn, book);
+        styleRow(progressBar, inputs);
+
     })
 
 }
@@ -182,7 +184,10 @@ function styleRow(progressElement, inn) {
 
     if (parseFloat(progressElement.max) === parseFloat(progressElement.value)) {
         // console.log("hi");
-        inn.forEach(input => input.style.textDecoration = 'line-through')
+        inn.forEach(input => {
+            input.style.textDecoration = 'line-through';
+            input.style.textDecorationThickness = '0.1rem';
+        })
     } else {
         inn.forEach(input => input.style.textDecoration = 'none');
     }
