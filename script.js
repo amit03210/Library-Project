@@ -32,7 +32,7 @@ search.addEventListener('keyup', searchFunction);
 //method
 
 function displayDefaultBook() {
-    const newBook1 = new Book('Harry Potter', 'JK Rowling', 2000, 3000, true, true);
+    const newBook1 = new Book('Harry Potter', 'JK Rowling', 3000, 3000, true, true);
     const newBook2 = new Book('Wednesday', 'Tehlor Kay Mejia', 521, 1521, true, true);
     const newBook3 = new Book('The Great Gatsby', 'F. Scott Fitzgerald', 65, 206, true, true);
     const newBook4 = new Book('Pride and Prejudice', 'Jane Austen', 25, 184, true, true);
