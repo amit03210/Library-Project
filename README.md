@@ -12,7 +12,7 @@ A simple, interactive web app to track your reading progress across multiple boo
 
 ### 🖼️ Screenshot
 
-*(You can add one once the book image task is complete!)*
+![image](https://raw.githubusercontent.com/amit03210/Library-Project/refs/heads/main/assets/image.png)
 
 ---
 
