@@ -29,8 +29,8 @@ tbody.addEventListener('click', (e) => {
 });
 search.addEventListener('keyup', searchFunction);
 
-//method
 
+//method
 function displayDefaultBook() {
     const newBook1 = new Book('Harry Potter', 'JK Rowling', 3000, 3000, true, true);
     const newBook2 = new Book('Wednesday', 'Tehlor Kay Mejia', 521, 1521, true, true);
@@ -63,7 +63,7 @@ function renderUI() {
                     <td><input type="number" placeholder="0" value="${book.pageRead}" class="row-pageRead input-field"/></td>
                     <td><input type="number" placeholder="0" value="${book.totalPage}" class="row-page input-field"/></td>
                     <td><progress max="${book.totalPage}" value="${book.pageRead}" class="progress-bar"></progress></td>
-                    <td>
+                    <td class="row-action">
                         <button class="edit-book">Edit</button>
                         <button class="del-book">Delete</button>
                     </td> 
@@ -139,10 +139,12 @@ function editBook(e) {
 function changeButtonBG(editBtn, obj) {
     if (!obj.readOnly) {
         editBtn.style.backgroundColor = '#4CAF50';
+        editBtn.textContent = 'Save';
         editBtn.style.color = 'white';
     } else {
         editBtn.style.backgroundColor = "";
         editBtn.style.color = "";
+        editBtn.textContent = 'Edit';
     }
 }
 

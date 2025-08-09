@@ -1,5 +1,6 @@
 * {
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 header {
@@ -71,6 +72,7 @@ td,
 th {
   border-left: 1px solid #ccc;
   padding: 8px;
+
 }
 
 thead th:not(:first-child) {
@@ -85,6 +87,7 @@ thead th:not(:first-child) {
 
 tbody input {
   font-family: 'nunito';
+
 }
 
 tfoot td {
@@ -115,8 +118,9 @@ tfoot button:active {
 
 td input {
   color: black;
-  border: none;
   cursor: default;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
 
 }
 
@@ -145,7 +149,6 @@ tfoot button {
 button {
   cursor: pointer;
   font-family: 'roboto';
-
 }
 
 progress {
@@ -182,4 +185,14 @@ progress::-webkit-progress-value {
 .sep {
   height: 1.2vh;
   background-color: #4caf50;
+}
+
+.row-action {
+  display: flex;
+  justify-content: center;
+}
+
+.row-action button {
+  width: 60px;
+  height: 100%;
 }
